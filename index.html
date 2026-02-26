@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Confidencial - JAO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- FONTE NOVA (mais legível) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- FUNDO ANIMADO -->
+<div class="emoji-bg">
+    <span class="emoji">🔥</span>
+    <span class="emoji">😈</span>
+    <span class="emoji">🍺</span>
+    <span class="emoji">🚬</span>
+    <span class="emoji">🤖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎂</span>
+    <span class="emoji">🎊</span>
+    <span class="emoji">🕺</span>
+    <span class="emoji">💃</span>
+    <span class="emoji">🎈</span>
+    <span class="emoji">🥳</span>
+    <span class="emoji">🍾</span>
+    <span class="emoji">💥</span>
+</div>
+
+<nav id="navbar">
+    DOSSIÊ CONFIDENCIAL — JÃO
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1 class="glitch">JÃO</h1>
+    <p>João Victor Santaterra Azevedo</p>
+    <button onclick="scrollToSection()">Acessar Arquivo</button>
+</section>
+
+<!-- DADOS -->
+<section id="dados">
+    <h2>🧾 Ficha Técnica</h2>
+    <div class="card">
+        <p>18 anos — 16 de Março</p>
+        <p>Altura: Em desenvolvimento</p>
+        <p>Funcionário da lendária Pizzinato (Império das Telhas™)</p>
+        <p>Build: fortinho compacto</p>
+        <p>Olhar panorâmico 360°</p>
+        <p>Cavanhaque estratégico nível chefão</p>
+    </div>
+</section>
+
+<!-- FOTOS -->
+<section class="photo-section">
+    <div class="photo-card">
+        <img src="img/jao no hospital.jpeg" alt="">
+        <div class="desc">
+            <h3>🫀 Arquivo Médico Confidencial</h3>
+            <p>Coração grande demais pra esse mundo. Já passou por batalhas internas dignas de roteiro dramático.</p>
+        </div>
+    </div>
+</section>
+
+<section class="photo-section">
+    <div class="photo-card">
+        <img src="img/jao com skol, cigarro e oreo.jpeg" alt="">
+        <div class="desc">
+            <h3>🚬 Modo Noturno Ativado</h3>
+            <p>Nicotina, Skol e decisões questionáveis. Combo clássico da personalidade caótica.</p>
+        </div>
+    </div>
+</section>
+
+<section class="photo-section">
+    <div class="photo-card">
+        <img src="img/jao dormindo e fumando.jpeg" alt="">
+        <div class="desc">
+            <h3>🛋️ Estado Natural</h3>
+            <p>Encontrado frequentemente refletindo sobre a vida (ou só chapado mesmo).</p>
+        </div>
+    </div>
+</section>
+
+<section class="photo-section">
+    <div class="photo-card">
+        <img src="img/jao e bumblebee.jpeg" alt="">
+        <div class="desc">
+            <h3>🤖 Forma Final</h3>
+            <p>Parceria oficial com Autobots. Claramente o protagonista do próprio filme.</p>
+        </div>
+    </div>
+</section>
+
+<section class="photo-section">
+    <div class="photo-card">
+        <img src="img/jao e sua classica camisa de piknik.jpeg" alt="">
+        <div class="desc">
+            <h3>🌳 Camisa Lendária</h3>
+            <p>A famosa camisa oficial do piquenique. Evento canônico da história.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PERICULOSIDADE -->
+<section>
+    <h2>⚠️ Nível de Periculosidade Social</h2>
+    <div class="card">
+        <p>Fala demais quando bebe</p>
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+        <p>Decisões questionáveis</p>
+        <div class="bar"><div class="fill" style="width:95%"></div></div>
+
+        <p>Desaparece quando a conta chega</p>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section>
+    <h2>🖼️ Galeria Extra</h2>
+    <div class="gallery">
+        <img src="img/jao com skol, cigarro e oreo.jpeg">
+        <img src="img/jao pose sujestiva.jpeg">
+        <img src="img/jao no hospital.jpeg">
+        <img src="img/jao dormindo e fumando.jpeg">
+        <img src="img/jao e sua classica camisa de piknik.jpeg">
+        <img src="img/jao e bumblebee.jpeg">
+    </div>
+</section>
+
+<!-- ÁREA RESTRITA 
+<section>
+    <h2>🔞 Área Ultra Restrita</h2>
+    <div class="card restricted">
+        <p>████████████████████</p>
+        <p>CONTEÚDO CLASSIFICADO</p>
+    </div>
+</section> -->
+
+<section class="party-invite">
+    <h2>🎉 CONVOCAÇÃO OFICIAL 🎉</h2>
+    <p>
+        Você foi oficialmente convocado para celebrar o aniversário
+        da entidade conhecida como JAO.
+    </p>
+    <p>
+        Comparecimento obrigatório.
+        Traga energia, histórias duvidosas e disposição pra caos.
+    </p>
+    <button onclick="alert('Local secreto revelado em breve... 😈')">
+        Confirmar Presença
+    </button>
+</section>
+
+<footer>
+    Projeto especial de aniversário — 16/03 🎂
+</footer>
+
+<!-- BOTÃO FIXO -->
+<button class="next-button" onclick="scrollNext()">Próximo ↓</button>
+
+<script>
+
+// Navbar encolhe
+window.addEventListener("scroll", function(){
+    let nav = document.getElementById("navbar");
+    if(window.scrollY > 50){
+        nav.classList.add("small");
+    } else {
+        nav.classList.remove("small");
+    }
+});
+
+// Scroll hero → dados
+function scrollToSection(){
+    document.getElementById("dados").scrollIntoView({behavior:"smooth"});
+}
+
+// Botão próximo automático
+function scrollNext(){
+    window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
