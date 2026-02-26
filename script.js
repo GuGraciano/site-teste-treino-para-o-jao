@@ -43,6 +43,24 @@ const btnProxima = document.getElementById("btnProxima");
 const confirmarBtn = document.getElementById("confirmarBtn");
 
 
+const dataFesta = new Date("March 16, 2026 19:00:00").getTime(); // Coloque o ano e horário da festa
+
+setInterval(() => {
+    const agora = new Date().getTime();
+    const distancia = dataFesta - agora;
+
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    const contadorEl = document.getElementById("contadorAniversario");
+    if(contadorEl) {
+        contadorEl.innerHTML = `Tempo restante: ${dias}d ${horas}h ${minutos}m ${segundos}s 💣`;
+    }
+}, 1000);
+
+
 
 // =========================
 // FUNÇÕES
@@ -112,7 +130,14 @@ btnAnterior.addEventListener("click", () => mudarImagem(-1));
 btnProxima.addEventListener("click", () => mudarImagem(1));
 
 confirmarBtn.addEventListener("click", () => {
-    alert("Local secreto revelado em breve... 😈");
+    // Coloque o DDD e o número aqui. Ex: 5511999999999
+    const numero = "5519998202217"; 
+    const mensagem = "Fui convocado pelo Dossiê! Confirmo minha presença no caos do dia 16/03. Me passa o local secreto! 🍻🔥";
+    
+    // Transforma a mensagem num formato de link que o navegador entende
+    const zapLink = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    
+    window.open(zapLink, "_blank"); // Abre em nova aba
 });
 
 window.addEventListener("scroll", () => {
