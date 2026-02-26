@@ -108,23 +108,25 @@ button:hover{
     display:flex;
     justify-content:center;
     width:100%;
+    margin:80px 0;
 }
 
 .photo-card{
-    max-width:600px;
+    max-width:600px; /* controla tamanho no PC */
     width:100%;
     background:rgba(255,255,255,0.05);
     border-radius:20px;
     overflow:hidden;
     backdrop-filter:blur(15px);
     transition:0.3s;
+    display:flex;
+    flex-direction:column;
 }
 
 .photo-card img{
     width:100%;
-    height:400px;
-    object-fit:cover;
-    object-position:center 20%; /* Foca mais no rosto */
+    height:auto; /* 🔥 agora respeita proporção real */
+    display:block;
 }
 
 .photo-card:hover{
@@ -134,6 +136,11 @@ button:hover{
 
 .desc{
     padding:20px;
+}
+
+.desc h3{
+    margin-bottom:10px;
+    color:#a855f7;
 }
 
 /* BARRA */
@@ -151,24 +158,64 @@ button:hover{
 }
 
 /* GALERIA */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+/* MODAL GALERIA */
+.galeria-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+    padding:20px;
+}
+
+
+/* barra superior */
+.top-bar{
+    position:absolute;
+    top:20px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 20px;
+    font-size:18px;
+}
+
+/* botão fechar */
+.fechar{
+    cursor:pointer;
+    font-size:22px;
+}
+
+/* imagem */
+.galeria-modal img{
+    max-width:100%;
+    max-height:70vh;
+    border-radius:20px;
+    transition: opacity 0.4s ease-in-out;
+    opacity:1;
+}
+
+/* botões embaixo */
+.controles{
+    margin-top:25px;
+    display:flex;
     gap:20px;
-    width:100%;
-    max-width:1000px;
 }
 
-.gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
+.controles button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#a855f7;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
 }
 
 .party-invite {
@@ -259,5 +306,35 @@ footer{
     100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
+    }
+}
+
+@media (max-width:768px){
+
+    .galeria-modal{
+        justify-content:space-between;
+        padding-top:60px;
+        padding-bottom:40px;
+    }
+
+    .galeria-modal img{
+        max-height:60vh;
+    }
+
+    .controles{
+        width:100%;
+        justify-content:space-around;
+        margin-top:0;
+    }
+
+    .controles button{
+        flex:1;
+        margin:0 10px;
+    }
+
+    /* remove efeito hover no celular */
+    button:hover{
+        transform:none;
+        box-shadow:none;
     }
 }
