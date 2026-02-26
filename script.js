@@ -40,8 +40,9 @@ const imagemGaleria = document.getElementById("imagemGaleria");
 const contador = document.getElementById("contador");
 const btnAnterior = document.getElementById("btnAnterior");
 const btnProxima = document.getElementById("btnProxima");
-const nextBtn = document.getElementById("nextBtn");
 const confirmarBtn = document.getElementById("confirmarBtn");
+
+
 
 // =========================
 // FUNÇÕES
@@ -75,6 +76,20 @@ function fecharGaleria() {
     galeriaModal.style.display = "none";
 }
 
+galeriaModal.addEventListener("click", (e) => {
+    if (e.target === galeriaModal) {
+        fecharGaleria();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (galeriaModal.style.display === "flex") {
+        if (e.key === "Escape") fecharGaleria();
+        if (e.key === "ArrowRight") mudarImagem(1);
+        if (e.key === "ArrowLeft") mudarImagem(-1);
+    }
+});
+
 function scrollToSection() {
     document.getElementById("dados").scrollIntoView({ behavior: "smooth" });
 }
@@ -95,7 +110,6 @@ abrirGaleriaBtn.addEventListener("click", abrirGaleria);
 fecharGaleriaBtn.addEventListener("click", fecharGaleria);
 btnAnterior.addEventListener("click", () => mudarImagem(-1));
 btnProxima.addEventListener("click", () => mudarImagem(1));
-nextBtn.addEventListener("click", scrollNext);
 
 confirmarBtn.addEventListener("click", () => {
     alert("Local secreto revelado em breve... 😈");
