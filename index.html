@@ -11,12 +11,11 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>">
 
     <!-- Meta Tags para Redes Sociais / WhatsApp -->
-<meta property="og:title" content="Dossiê Confidencial - JÃO">
-<meta property="og:description" content="Acesso restrito. Arquivos confidenciais, nível de periculosidade e convocação oficial para o dia 16/03.">
-<meta property="og:url" content="https://niver-do-jao-convite.netlify.app/">
-<meta property="og:image" content="https://niver-do-jao-convite.netlify.app/img/jao%20supremo.jpeg">
-<meta property="og:type" content="website">
-
+    <meta property="og:title" content="Dossiê Confidencial - JÃO">
+    <meta property="og:description" content="Acesso restrito. Arquivos confidenciais, nível de periculosidade e convocação oficial para o dia 16/03.">
+    <meta property="og:url" content="https://niver-do-jao-convite.netlify.app/">
+    <meta property="og:image" content="https://niver-do-jao-convite.netlify.app/img/jao%20supremo.jpeg">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -46,9 +45,10 @@
         <h1 class="glitch">JÃO</h1>
         <p>João Victor Santaterra Azevedo</p>
         <button id="btnArquivo">Acessar Arquivo</button>
-            <div id="contadorAniversario" style="font-size: 24px; color: #a855f7; font-weight: bold; margin: 20px;">
-                Calculando tempo para o caos...
-            </div>
+        <div id="contadorAniversario" style="font-size: 24px; color: #a855f7; font-weight: bold; margin: 20px;">
+            Calculando tempo para o caos...
+        </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
 
     <section id="dados">
@@ -61,50 +61,66 @@
             <p>Olhar panorâmico 360°</p>
             <p>Cavanhaque estratégico nível chefão</p>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
 
-    <!-- FOTOS -->
+    <!-- FOTOS — loading="lazy" em todas as imagens -->
     <section class="photo-section">
-        <div class="photo-card"> <img src="img/jao hospital.jpeg" alt="">
+        <div class="photo-card">
+            <img src="img/jao hospital.jpeg" alt="Jão no hospital" loading="lazy">
             <div class="desc">
                 <h3>🫀 Arquivo Médico Confidencial</h3>
-                <p>Coração grande demais pra esse mundo. Já passou por batalhas internas dignas de roteiro dramático.
-                </p>
+                <p>Coração grande demais pra esse mundo. Já passou por batalhas internas dignas de roteiro dramático.</p>
             </div>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
+
     <section class="photo-section">
-        <div class="photo-card"> <img src="img/jao com skol, cigarro e oreo.jpeg" alt="">
+        <div class="photo-card">
+            <img src="img/jao com skol, cigarro e oreo.jpeg" alt="Jão com Skol, cigarro e Oreo" loading="lazy">
             <div class="desc">
                 <h3>🚬 Modo Noturno Ativado</h3>
                 <p>Nicotina, Skol e decisões questionáveis. Combo clássico da personalidade caótica.</p>
             </div>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
+
     <section class="photo-section">
-        <div class="photo-card"> <img src="img/jao dormindo e fumando.jpeg" alt="">
+        <div class="photo-card">
+            <img src="img/jao dormindo e fumando.jpeg" alt="Jão dormindo" loading="lazy">
             <div class="desc">
                 <h3>🛋️ Estado Natural</h3>
                 <p>Encontrado frequentemente refletindo sobre a vida (ou só chapado mesmo).</p>
             </div>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
+
     <section class="photo-section">
-        <div class="photo-card"> <img src="img/jao e bumblebee.jpeg" alt="">
+        <div class="photo-card">
+            <img src="img/jao e bumblebee.jpeg" alt="Jão e Bumblebee" loading="lazy">
             <div class="desc">
                 <h3>🤖 Forma Final</h3>
                 <p>Parceria oficial com Autobots. Claramente o protagonista do próprio filme.</p>
             </div>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
+
     <section class="photo-section">
-        <div class="photo-card"> <img src="img/jao e sua classica camisa de piknik.jpeg" alt="">
+        <div class="photo-card">
+            <img src="img/jao e sua classica camisa de piknik.jpeg" alt="Jão com camisa de piquenique" loading="lazy">
             <div class="desc">
                 <h3>🌳 Camisa Lendária</h3>
                 <p>A famosa camisa oficial do piquenique. Evento canônico da história.</p>
             </div>
         </div>
-    </section> <!-- PERICULOSIDADE -->
+        <button class="btn-scroll" title="Próxima seção">↓</button>
+    </section>
+
+    <!-- PERICULOSIDADE -->
     <section>
         <h2>⚠️ Nível de Periculosidade Social</h2>
         <div class="card">
@@ -121,11 +137,13 @@
                 <div class="fill" style="width:80%"></div>
             </div>
         </div>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
 
     <section>
         <h2>🖼️ Galeria Extra</h2>
         <button id="abrirGaleriaBtn">Acessar Galeria</button>
+        <button class="btn-scroll" title="Próxima seção">↓</button>
     </section>
 
     <div class="galeria-modal" id="galeriaModal">
@@ -134,7 +152,7 @@
             <span class="fechar" id="fecharGaleria">✕</span>
         </div>
 
-        <img id="imagemGaleria" src="">
+        <img id="imagemGaleria" src="" alt="Foto da galeria">
 
         <div class="controles">
             <button id="btnAnterior">Anterior</button>
@@ -153,7 +171,7 @@
     </footer>
 
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
